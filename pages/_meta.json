@@ -1,7 +1,10 @@
 {
   "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
+  "basic": "Basic Knowledge",
+  "lagu": "Lagu",
+  "commands": "Commands",
+  "fasa-3": " Fasa 3",
+  "reference": "Reference",
   "about": {
     "title": "About",
     "type": "page"
@@ -9,7 +12,7 @@
   "contact": {
     "title": "Contact ↗",
     "type": "page",
-    "href": "https://twitter.com/shuding_",
+    "href": "https://github.com/hovahyii/",
     "newWindow": true
   }
 }
