@@ -30,10 +30,16 @@ Our mission is to provide a centralized repository for all important Palapes Lau
 
 We encourage Palapes Laut UMPSA members to contribute to this website. If you have notes, insights, or valuable information to share, feel free to submit your contributions. Together, we can enhance the learning experience for everyone.
 
+## Contributors
+
+1. PKK MUHAMMAD SYAHIR BIN AHMAD NV/8708656
+2. PKK FAKHRIA MUSDALIFAH BINTI SAIFULLAH NV/8708646
+
 ## Contact Us
 
 If you have any questions, suggestions, or feedback, don't hesitate to reach out to **Hovah Yii** at ump.hovahyii@gmail.com. We value your input and are dedicated to making this inventory a valuable resource for all Palapes Laut UMPSA members.
 
 Thank you for being a part of our community and for your commitment to excellence in Palapes Laut training!
+
 
 Happy learning! 🚢📚
