@@ -1,7 +1,3 @@
----
-author: Hovah Yii
-contact: ump.hovahyii@gmail.com
----
 
 # About Hovah's Palapes Laut Notes
 
