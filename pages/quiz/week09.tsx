@@ -26,7 +26,14 @@ const Week09: React.FC = () => {
     setShowBadge(false);
     setSelectedAnswer(null);
     setShowPunishment(false);
-    setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
+
+    if (currentQuestionIndex === questions.length - 1) {
+      // User is on the last question, show congratulations message
+      alert('Congratulations! You answered all the questions.');
+    } else {
+      // Move to the next question
+      setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
+    }
   };
 
   const handlePreviousClick = () => {
