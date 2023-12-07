@@ -1,0 +1,28 @@
+/* NotificationCard.module.css */
+.notification-card-container {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s;
+  }
+  
+  .notification-card-container:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .notification-card-container a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit the text color from the parent */
+  }
+  
+
+  
+  .notification-date {
+    color: #1877f2; /* Facebook blue color for date */
+  }
+  
+  .notification-author {
+    color: #606770; /* Facebook grey color for author name */
+  }
+  

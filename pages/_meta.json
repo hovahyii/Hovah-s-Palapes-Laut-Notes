@@ -24,6 +24,8 @@
   },
   "notification": {
     "title": "Notification 🔔",
-    "type": "page"
+    "href": "/notification",
+    "type": "page",
+    "newWindow": true
   }
 }
