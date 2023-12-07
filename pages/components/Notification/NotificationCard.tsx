@@ -5,7 +5,7 @@ import styles from './NotificationCard.module.css';
 
 interface NotificationCardProps {
   notification: {
-    id: string;
+    id: number;
     title: string;
     content: string;
     date: string; // Assuming "date" is the new field in your notifications.json
