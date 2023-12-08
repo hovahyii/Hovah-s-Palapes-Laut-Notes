@@ -1,4 +1,3 @@
-// notifications/index.tsx
 import React from 'react';
 import NotificationCard from '../components/Notification/NotificationCard';
 import notificationsData from './notifications.json';
@@ -8,7 +7,7 @@ const Notifications: React.FC = () => (
     <div className="w-full max-w-md">
       <h1 className="text-2xl font-semibold mb-4">Notifications</h1>
       {notificationsData.map((notification, index) => (
-            <NotificationCard notification={{ ...notification, id: index.toString() }} />
+        <NotificationCard key={notification.id} notification={notification} />
       ))}
     </div>
   </div>
