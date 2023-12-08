@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import questionsData from './questions.json';
 import styles from './quiz.module.css';
-import QuestionNavigationBox from '../components/QuestionNavigationBox';
+import QuestionNavigationBox from '../components/Quiz/QuestionNavigationBox';
 
 const QuizPage: React.FC = () => {
   const [questions, setQuestions] = useState(questionsData);

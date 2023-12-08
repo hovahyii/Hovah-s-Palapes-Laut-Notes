@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import questionsData from './questions-week-09.json';
 import styles from './quiz.module.css';
-import QuestionNavigationBoxWeek09 from '../components/QuestionNavigationBoxWeek09';
+import QuestionNavigationBoxWeek09 from '../components/Quiz/QuestionNavigationBoxWeek09';
 
 const Week09: React.FC = () => {
   const [questions, setQuestions] = useState(questionsData);
