@@ -1,4 +1,3 @@
-// pages/notifications/[id].tsx
 import React from 'react';
 import { useRouter } from 'next/router';
 import notificationsData from './notifications.json';
@@ -7,8 +6,11 @@ const NotificationDetails: React.FC = () => {
   const router = useRouter();
   const { id } = router.query;
 
-  // Convert id to number before comparison
-  const notification = notificationsData.find((item) => item.id === Number(id));
+  // Ensure id is a valid number
+  const notificationId = Number(id);
+
+  // Find the notification by id
+  const notification = notificationsData.find((item) => item.id === notificationId);
 
   if (!notification) {
     // Handle the case where the notification is not found
