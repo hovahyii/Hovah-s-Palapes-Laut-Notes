@@ -1,0 +1,175 @@
+[
+    {
+      "id": 1,
+      "question": "Kalau nampak lencana ni, kena panggil jurulatih tu ...",
+      "image": "/quiz/GI.png", 
+      "options": [
+        { "id": "a", "text": "GI" },
+        { "id": "b", "text": "PKOR" },
+        { "id": "c", "text": "Leading" }
+      ],
+      "correctAnswer": "a",
+      "punishment": "Introduce yourself (name, no tentera, course)"
+    },
+    {
+      "id": 2,
+      "question": "Berikut adalah Nilai Teras TLDM kecuali",
+      "options": [
+        { "id": "a", "text": "Kesetiaan" },
+        { "id": "b", "text": "Kebanggaan " },
+        { "id": "c", "text": "Kejujuran" },
+        { "id": "d", "text": "Keberanian" }
+
+      ],
+      "correctAnswer": "c",
+      "punishment": "Bagi satu kelebihan kamu"
+    },
+    {
+      "id": 3,
+      "question": "Gambar ini menunjukkan pangkat ...",
+      "image": "/quiz/leftenan-madya.png", 
+      "options": [
+        { "id": "a", "text": "Leftenan Muda" },
+        { "id": "b", "text": "Leftenan" },
+        { "id": "c", "text": "Leftenan Madya" }
+      ],
+      "correctAnswer": "c",
+      "punishment": "Bagi satu kelebihan kamu"
+    },
+    {
+      "id": 4,
+      "question": "Kalau nampak lencana ni, kena panggil jurulatih tu ...",
+      "image": "/quiz/bintara-muda.png", 
+      "options": [
+        { "id": "a", "text": "Leading" },
+        { "id": "b", "text": "PO (Petty Officer)" },
+        { "id": "c", "text": "Stap" }
+      ],
+      "correctAnswer": "b",
+      "punishment": "Memperkenalkan diri"
+    },
+    {
+      "id": 5,
+      "question": "Palapes Laut UMPSA di bawah mana satu Pasukan Simpanan Tentera Laut",
+      "options": [
+        { "id": "a", "text": "PSTL Setiu" },
+        { "id": "b", "text": "PSTL Kuantan" },
+        { "id": "c", "text": "PSTL Kuching" }
+      ],
+      "correctAnswer": "b",
+      "punishment": "Bagi satu kelebihan kamu"
+    },
+    {
+      "id": 6,
+      "question": "Apa maksud muster",
+      "options": [
+        { "id": "a", "text": "Berbaris" },
+        { "id": "b", "text": "Lawatan Malam" },
+        { "id": "c", "text": "CO" }
+      ],
+      "correctAnswer": "a",
+      "punishment": "Memperkenalkan diri"
+    },
+    {
+      "id": 7,
+      "question": "What is the naval term OLDMAN stands for",
+      "options": [
+        { "id": "a", "text": "Veteran" },
+        { "id": "b", "text": "Staff" },
+        { "id": "c", "text": "Commanding Officer" }
+      ],
+      "correctAnswer": "c",
+      "punishment": "Memperkenalkan diri"
+    },
+    {
+      "id": 8,
+      "question": "Dalam mess etiquette, apabila Pegawai Kadet pakai baju PT dan pegawai memakai baju selain daripada PT, OC perlu sebut excuse our ___ (fill in the blank) please Sir / Ma’am",
+      "options": [
+        { "id": "a", "text": "rig" },
+        { "id": "b", "text": "fault" },
+        { "id": "c", "text": "interrupt" }
+      ],
+      "correctAnswer": "a",
+      "punishment": "Jawab kenapa kamu nak masuk Navy?"
+    },
+    {
+      "id": 9,
+      "question": "Gambar ini menunjukkan pangkat ...",
+      "image": "/quiz/bintara-kanan.png", 
+      "options": [
+        { "id": "a", "text": "Bintara Muda" },
+        { "id": "b", "text": "Bintara Kanan" },
+        { "id": "c", "text": "Bintara Tua" }
+      ],
+      "correctAnswer": "b",
+      "punishment": "Jawab kenapa kamu nak masuk Navy?"
+    },
+    {
+      "id": 10,
+      "question": "Rutin Alpha adalah untuk Pengawai Kadet ... ",
+      "options": [
+        { "id": "a", "text": "Tahun Pertama dan Kedua" },
+        { "id": "b", "text": "Tahun Kedua dan Ketiga" },
+        { "id": "c", "text": "Tahun Akhir" }
+      ],
+      "correctAnswer": "a",
+      "punishment": "Bagi satu kelebihan kamu"
+    },
+    {
+      "id": 11,
+      "question": "Siapakah Commanding Officer Palapes Laut UMPSA 2023",
+      "options": [
+        { "id": "a", "text": "LT KDR SHAHRUL ARIFFIN BIN ABDULLAH PSSTLDM" },
+        { "id": "b", "text": "LT KDR MOHD SHAHID BIN MAZLAN TLDM NV/404386" },
+        { "id": "c", "text": "LT KDR NIK ZAABA BIN NIK ABDULLAH TLDM." }
+      ],
+      "correctAnswer": "c",
+      "punishment": "Bagi satu kelebihan kamu"
+    },
+    {
+      "id": 12,
+      "question": "Lencana di bawah menunjukkan kepakaran?",
+      "image": "/quiz/PTI.png", 
+      "options": [
+        { "id": "a", "text": "Bandsman" },
+        { "id": "b", "text": "Physical Training Instructor" },
+        { "id": "c", "text": "Communications" }
+      ],
+      "correctAnswer": "b",
+      "punishment": "Jawab kenapa kamu nak masuk Navy?"
+    },
+    {
+      "id": 13,
+      "question": "Dalam Sistem Divisyen, warna Insignia Pangkat utk THANA adalah",
+      "options": [
+        { "id": "a", "text": "Kuning" },
+        { "id": "b", "text": "Merah" },
+        { "id": "c", "text": "Biru" }
+      ],
+      "correctAnswer": "b",
+      "punishment": "Memperkenalkan diri"
+    },
+    {
+      "id": 14,
+      "question": "Apabila pengawai yang lebih senior datang, lepas cakap Baris, Baris, sedia, IC kena ",
+      "options": [
+        { "id": "a", "text": "Bagi salam (ASSALAMUALAIKUM / SELAMAT PAGI / PETANG) Tuan / Puan, (menghadap senior) kebenaran menjalankan tugas / lain-lain tugas." },
+        { "id": "b", "text": "Cakap Lakukan/ Carry On" },
+        { "id": "c", "text": "Baris senang diri." }
+      ],
+      "correctAnswer": "a",
+      "punishment": "Jawab kenapa kamu nak masuk Navy?"
+    },
+    {
+      "id": 15,
+      "question": "What is the Morse code for the letter Z?",
+      "options": [
+        { "id": "a", "text": "--.." },
+        { "id": "b", "text": "--.-" },
+        { "id": "c", "text": "__.." }
+      ],
+      "correctAnswer": "c",
+      "punishment": "Do 12 rock climbing"
+    }
+  ]
+  

@@ -1,6 +1,6 @@
 // components/QuestionNavigationBox.tsx
 import React from 'react';
-import styles from './QuestionNavigationBox.module.css';
+import styles from '../../components/Quiz/QuestionNavigationBox.module.css';
 
 interface QuestionNavigationBoxProps {
   totalQuestions: number;
@@ -14,7 +14,8 @@ const QuestionNavigationBox: React.FC<QuestionNavigationBoxProps> = ({
   onQuestionClick,
 }) => {
   const mosCodeSection = Array.from({ length: 15 }, (_, index) => index);
-  const semaphoreCodeSection = Array.from({ length: 15 }, (_, index) => index + 15);
+  const semaphoreCodeSection = Array.from({ length: 10 }, (_, index) => index + 15);
+  const weaponSection = Array.from({ length: 10 }, (_, index) => index + 25);
 
   return (
     <div className={styles.navigationBox}>
@@ -33,6 +34,18 @@ const QuestionNavigationBox: React.FC<QuestionNavigationBoxProps> = ({
       <div className={styles.section}>
         <div className={styles.sectionTitle}>Semaphore Code</div>
         {semaphoreCodeSection.map((index) => (
+          <div
+            key={index + 1}
+            className={`${styles.questionNumber} ${index === currentQuestionIndex && styles.currentQuestion}`}
+            onClick={() => onQuestionClick(index)}
+          >
+            {index + 1}
+          </div>
+        ))}
+      </div>
+      <div className={styles.section}>
+        <div className={styles.sectionTitle}>Weapon</div>
+        {weaponSection.map((index) => (
           <div
             key={index + 1}
             className={`${styles.questionNumber} ${index === currentQuestionIndex && styles.currentQuestion}`}

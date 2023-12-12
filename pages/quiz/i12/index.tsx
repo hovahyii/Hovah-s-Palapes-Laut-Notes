@@ -1,8 +1,9 @@
 // pages/quiz.tsx
 import React, { useState } from 'react';
 import questionsData from './questions.json';
-import styles from './quiz.module.css';
-import QuestionNavigationBox from '../components/Quiz/QuestionNavigationBox';
+import styles from '../quiz.module.css';
+import QuestionNavigationBox from './QuestionNavigationBox';
+import Image from 'next/image';
 
 const QuizPage: React.FC = () => {
   const [questions, setQuestions] = useState(questionsData);
@@ -47,6 +48,18 @@ const QuizPage: React.FC = () => {
     <div className={styles.quizContainer}>
       <div className={styles.questionContainer}>
         <h2 className={styles.questionText}>{questions[currentQuestionIndex].question}</h2>
+        {questions[currentQuestionIndex].image && (
+                    <div className={styles.imageContainer}>
+
+          <Image
+            width={300}
+            height={200}
+            src={questions[currentQuestionIndex].image}
+            alt="figure"
+          />
+                    </div>
+
+        )}
         <div>
           {questions[currentQuestionIndex].options.map((option) => (
             <div key={option.id}>
@@ -72,7 +85,11 @@ const QuizPage: React.FC = () => {
           </p>
         )}
         <div className={styles.buttonContainer}>
-          <button className={styles.previousButton} onClick={handlePreviousClick} disabled={currentQuestionIndex === 0}>
+          <button
+            className={styles.previousButton}
+            onClick={handlePreviousClick}
+            disabled={currentQuestionIndex === 0}
+          >
             Previous
           </button>
           <button className={styles.nextButton} onClick={handleNextClick}>

@@ -72,3 +72,14 @@
   }
   
 /* styles/QuestionNavigationBox.module.css */
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
+.centeredImage {
+  display: block;
+  margin: 0 auto;
+}
