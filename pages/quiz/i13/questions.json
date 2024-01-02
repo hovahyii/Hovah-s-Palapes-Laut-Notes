@@ -9,7 +9,7 @@
         { "id": "c", "text": "Leading" }
       ],
       "correctAnswer": "a",
-      "punishment": "Introduce yourself (name, no tentera, course)"
+      "punishment": "Push up 10 times"
     },
     {
       "id": 2,
@@ -22,7 +22,7 @@
 
       ],
       "correctAnswer": "c",
-      "punishment": "Bagi satu kelebihan kamu"
+      "punishment": "Jumping Jack 8 times"
     },
     {
       "id": 3,
@@ -34,7 +34,7 @@
         { "id": "c", "text": "Leftenan Madya" }
       ],
       "correctAnswer": "c",
-      "punishment": "Bagi satu kelebihan kamu"
+      "punishment": "Squad Jump 5 times"
     },
     {
       "id": 4,
@@ -46,7 +46,7 @@
         { "id": "c", "text": "Stap" }
       ],
       "correctAnswer": "b",
-      "punishment": "Memperkenalkan diri"
+      "punishment": "Speed combat 15 times"
     },
     {
       "id": 5,
@@ -57,7 +57,7 @@
         { "id": "c", "text": "PSTL Kuching" }
       ],
       "correctAnswer": "b",
-      "punishment": "Bagi satu kelebihan kamu"
+      "punishment": "Jumping Jack 15 times"
     },
     {
       "id": 6,
@@ -68,7 +68,7 @@
         { "id": "c", "text": "CO" }
       ],
       "correctAnswer": "a",
-      "punishment": "Memperkenalkan diri"
+      "punishment": "Squad Jump 5 times"
     },
     {
       "id": 7,
@@ -79,7 +79,7 @@
         { "id": "c", "text": "Commanding Officer" }
       ],
       "correctAnswer": "c",
-      "punishment": "Memperkenalkan diri"
+      "punishment": "Jumping Jack 18 times"
     },
     {
       "id": 8,
@@ -90,7 +90,7 @@
         { "id": "c", "text": "interrupt" }
       ],
       "correctAnswer": "a",
-      "punishment": "Jawab kenapa kamu nak masuk Navy?"
+      "punishment": "Naik Bukit 10 kali"
     },
     {
       "id": 9,
@@ -102,7 +102,7 @@
         { "id": "c", "text": "Bintara Tua" }
       ],
       "correctAnswer": "b",
-      "punishment": "Jawab kenapa kamu nak masuk Navy?"
+      "punishment": "Push up 8 times"
     },
     {
       "id": 10,
@@ -113,7 +113,7 @@
         { "id": "c", "text": "Tahun Akhir" }
       ],
       "correctAnswer": "a",
-      "punishment": "Bagi satu kelebihan kamu"
+      "punishment": "Speed combat 15 times"
     },
     {
       "id": 11,
@@ -124,7 +124,7 @@
         { "id": "c", "text": "LT KDR NIK ZAABA BIN NIK ABDULLAH TLDM." }
       ],
       "correctAnswer": "c",
-      "punishment": "Bagi satu kelebihan kamu"
+      "punishment": "Squad Jump 8 times"
     },
     {
       "id": 12,
@@ -136,7 +136,7 @@
         { "id": "c", "text": "Communications" }
       ],
       "correctAnswer": "b",
-      "punishment": "Jawab kenapa kamu nak masuk Navy?"
+      "punishment": "Push up 10 times"
     },
     {
       "id": 13,
@@ -147,7 +147,7 @@
         { "id": "c", "text": "Biru" }
       ],
       "correctAnswer": "b",
-      "punishment": "Memperkenalkan diri"
+      "punishment": "Jumping Jack 12 times"
     },
     {
       "id": 14,
@@ -158,7 +158,7 @@
         { "id": "c", "text": "Baris senang diri." }
       ],
       "correctAnswer": "a",
-      "punishment": "Jawab kenapa kamu nak masuk Navy?"
+      "punishment": "Tarik Tolak kaki 8 kali"
     },
     {
       "id": 15,
