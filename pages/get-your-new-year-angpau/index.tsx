@@ -10,7 +10,7 @@ import Modal from 'react-modal';
 Modal.setAppElement('body');
 
 // Countdown Timer Component
-const CountdownTimer = ({ targetDate }) => {
+const CountdownTimer = ({ targetDate, onCountdownEnd, setShowCountdown }) => {
   const calculateTimeLeft = () => {
     const now = new Date();
     const difference = targetDate.getTime() - now.getTime();
@@ -32,19 +32,36 @@ const CountdownTimer = ({ targetDate }) => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setTimeLeft(calculateTimeLeft());
+      const newTimeLeft = calculateTimeLeft();
+      setTimeLeft(newTimeLeft);
+  
+      const now = new Date();
+      if (now.getTime() >= targetDate.getTime()) {
+        console.log('Countdown ended in CountdownTimer');
+        onCountdownEnd();
+        setShowCountdown(false); // Set showCountdown to true when the countdown ends
+      }
     }, 1000);
-
+  
+    // Check if the current time is already past the target time
+    if (new Date().getTime() >= targetDate.getTime()) {
+      console.log('Countdown ended immediately in CountdownTimer');
+      onCountdownEnd();
+      setShowCountdown(false); // Set showCountdown to true when the countdown ends
+    }
+  
     return () => clearTimeout(timer);
-  });
-
+  }, []);
+  
+  
   return (
-    <div className={styles.countdown}>
+    <div className={styles.quizContainer}>
       <h1>Quiz starts in:</h1>
       <h2>{timeLeft.days} Days {timeLeft.hours} Hours {timeLeft.minutes} Minutes {timeLeft.seconds} Seconds</h2>
     </div>
   );
 };
+
 
 const QuizPage = () => {
   const router = useRouter();
@@ -54,9 +71,11 @@ const QuizPage = () => {
   const [timer, setTimer] = useState<number>(0);
   const [showNextButton, setShowNextButton] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [showCountdown, setShowCountdown] = useState(true);
+
   const targetDate = new Date(); // Current date by default
   targetDate.setDate(targetDate.getDate() + 0); // Set to tomorrow
-  targetDate.setHours(9, 0, 0, 0); // Set to 9 AM
+  targetDate.setHours(9, 0, 0, 0); // Set to 2 AM
 
   useEffect(() => {
     if (timer > 0) {
@@ -89,6 +108,12 @@ const QuizPage = () => {
     setTimer(0);
   };
 
+const handleCountdownEnd = () => {
+  console.log('Countdown ended');
+  setShowCountdown(false); // Set showCountdown to false when the countdown ends
+};
+
+
   // Meta tags for WhatsApp
   const metaTitle = 'Happy New Year | Claim Your Angpao';
   const metaDescription = 'Happy New Year 2024, claim your angpao by answering the questions correctly!';
@@ -108,11 +133,33 @@ const QuizPage = () => {
         <Image width={1000} height={200} src="https://cdn.shopify.com/s/files/1/0278/3651/4404/files/CNY.png?v=1704808935" alt="advertisement" />
       </Link>
       
+      {!showCountdown && (
+  <>
+    <h2>{questionsData[currentQuestionIndex].question}</h2>
+    <form>
+      {questionsData[currentQuestionIndex].options.map((option, index) => (
+        <label key={index} className={styles.optionLabel}>
+          <input
+            type="radio"
+            name="answer"
+            value={option.id}
+            checked={selectedAnswer === option.id}
+            onChange={() => handleAnswerSelect(option.id)}
+          />
+          {option.text}
+        </label>
+      ))}
+    </form>
+  </>
+)}
+
+
       {showNextButton && (
         <button onClick={handleNextClick} className={styles.nextButton}>Next</button>
       )}
 
-      <CountdownTimer targetDate={targetDate} />
+{showCountdown && <CountdownTimer targetDate={targetDate} onCountdownEnd={handleCountdownEnd} setShowCountdown={setShowCountdown} />}
+
 
       <Modal
         isOpen={modalIsOpen}
