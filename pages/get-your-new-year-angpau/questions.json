@@ -29,7 +29,7 @@
         { "id": "a", "text": "Kebawah Duli Yang Maha Mulia Seri Paduka Baginda Yang di-Pertuan Agong Sultan Ibrahim" },
         { "id": "b", "text": "Kebawah Duli Yang Maha Mulia Seri Paduka Baginda Yang di-Pertuan Agong Sultan Iskandar" },
         { "id": "c", "text": "Kebawah Duli Yang Maha Mulia Seri Paduka Baginda Yang di-Pertuan Agong Sultan Ibrahim Ibni Almarhum" },
-        { "id": "c", "text": "Kebawah Duli Yang Maha Mulia Seri Paduka Baginda Yang di-Pertuan Agong Sultan Iskandar Ibni Almarhum" }
+        { "id": "d", "text": "Kebawah Duli Yang Maha Mulia Seri Paduka Baginda Yang di-Pertuan Agong Sultan Iskandar Ibni Almarhum" }
 
       ],
       "correctAnswer": "a"
@@ -53,7 +53,7 @@
         { "id": "a", "text": "Laksama Muda" },
         { "id": "b", "text": "Kepten" },
         { "id": "c", "text": "Komander" },
-        { "id": "c", "text": "Leftenan Komander" }
+        { "id": "d", "text": "Leftenan Komander" }
       ],
       "correctAnswer": "b"
     },
@@ -74,7 +74,8 @@
       "options": [
         { "id": "a", "text": "Veteran" },
         { "id": "b", "text": "Staff" },
-        { "id": "c", "text": "Commanding Officer" }
+        { "id": "c", "text": "Commanding Officer" },
+        { "id": "d", "text": "Captain" }
       ],
       "correctAnswer": "c"
     },
@@ -109,7 +110,7 @@
         { "id": "a", "text": "NV/8708634" },
         { "id": "b", "text": "NV/8708635" },
         { "id": "c", "text": "NV/8708636" },
-        { "id": "c", "text": "NV/8708637" }
+        { "id": "d", "text": "NV/8708637" }
       ],
       "correctAnswer": "c"
     }
