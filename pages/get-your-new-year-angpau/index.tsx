@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import questionsData from './questions.json';
 import styles from './quiz.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
+import Head from 'next/head';
 import Modal from 'react-modal';
 
 Modal.setAppElement('body');
@@ -37,7 +39,7 @@ const CountdownTimer = ({ targetDate }) => {
   });
 
   return (
-    <div className={styles.quizContainer}>
+    <div className={styles.countdown}>
       <h1>Quiz starts in:</h1>
       <h2>{timeLeft.days} Days {timeLeft.hours} Hours {timeLeft.minutes} Minutes {timeLeft.seconds} Seconds</h2>
     </div>
@@ -45,6 +47,7 @@ const CountdownTimer = ({ targetDate }) => {
 };
 
 const QuizPage = () => {
+  const router = useRouter();
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [incorrectAttempts, setIncorrectAttempts] = useState(0);
@@ -86,8 +89,21 @@ const QuizPage = () => {
     setTimer(0);
   };
 
+  // Meta tags for WhatsApp
+  const metaTitle = 'Happy New Year | Claim Your Angpao';
+  const metaDescription = 'Happy New Year 2024, claim your angpao by answering the questions correctly!';
+  const metaImage = '/quiz/CNY-2024-Banner.gif';
+  const currentUrl = 'https://palapes-laut-notes.vercel.app/get-your-new-year-angpau';
+
   return (
     <div className={styles.quizContainer}>
+      <Head>
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={metaDescription} />
+        <meta property="og:image" content={metaImage} />
+        <meta property="og:url" content={currentUrl} />
+      </Head>
+
       <Link className={styles.banner} href="https://leica-store.my/pages/lny-gift-guide" target="_blank">
         <Image width={1000} height={200} src="https://cdn.shopify.com/s/files/1/0278/3651/4404/files/CNY.png?v=1704808935" alt="advertisement" />
       </Link>
@@ -96,7 +112,7 @@ const QuizPage = () => {
         <button onClick={handleNextClick} className={styles.nextButton}>Next</button>
       )}
 
-<CountdownTimer targetDate={targetDate} />
+      <CountdownTimer targetDate={targetDate} />
 
       <Modal
         isOpen={modalIsOpen}
@@ -115,7 +131,6 @@ const QuizPage = () => {
       <Link href="https://milkteaplus.vercel.app/bm/service" target="_blank" className={styles.banner}>
         <Image width={1000} height={200} src="/quiz/advertisement.gif" alt="advertisement" />
       </Link>
-
     </div>
   );
 };
