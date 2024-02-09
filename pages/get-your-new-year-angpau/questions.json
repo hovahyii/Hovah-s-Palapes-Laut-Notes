@@ -1,0 +1,117 @@
+[
+    {
+      "id": 1,
+      "question": "What is another name for Chinese New Year?",
+      "options": [
+        { "id": "a", "text": "Spring Festival" },
+        { "id": "b", "text": "Autumn Festival" },
+        { "id": "c", "text": "Summer Festival" },
+        { "id": "c", "text": "Winter Festival" }
+      ],
+      "correctAnswer": "a"
+    },
+    {
+      "id": 2,
+      "question": "What is the Zodiac animal for this year 2024?",
+      "options": [
+        { "id": "a", "text": "Mouse" },
+        { "id": "b", "text": "Dragon " },
+        { "id": "c", "text": "Tiger" },
+        { "id": "d", "text": "Rabbit" }
+
+      ],
+      "correctAnswer": "b"
+    },
+    {
+      "id": 3,
+      "question": "Apakah penggunaan nama rasmi bagi Yang di-Pertuan Agong ke-17 dan Raja Permaisuri Agong yang telah dikemas kini oleh Istana Negara",
+      "options": [
+        { "id": "a", "text": "Kebawah Duli Yang Maha Mulia Seri Paduka Baginda Yang di-Pertuan Agong Sultan Ibrahim" },
+        { "id": "b", "text": "Kebawah Duli Yang Maha Mulia Seri Paduka Baginda Yang di-Pertuan Agong Sultan Iskandar" },
+        { "id": "c", "text": "Kebawah Duli Yang Maha Mulia Seri Paduka Baginda Yang di-Pertuan Agong Sultan Ibrahim Ibni Almarhum" },
+        { "id": "c", "text": "Kebawah Duli Yang Maha Mulia Seri Paduka Baginda Yang di-Pertuan Agong Sultan Iskandar Ibni Almarhum" }
+
+      ],
+      "correctAnswer": "a"
+    },
+    {
+      "id": 4,
+      "question": "Negeri yang terbesar di Malaysia ialah ...",
+      "options": [
+        { "id": "a", "text": "Pahang" },
+        { "id": "b", "text": "Kelantan" },
+        { "id": "c", "text": "Sabah" },
+        { "id": "d", "text": "Sarawak" }
+
+      ],
+      "correctAnswer": "d"
+    },
+    {
+      "id": 5,
+      "question": "Prof Dato’ Ts Dr. Yuserrie Zainuddin dikurniakan tauliah ... (Kehormat) PSSTLDM merangkap Komandan Pasukan Latihan Pegawai Simpanan (PALAPES) UMPSA",
+      "options": [
+        { "id": "a", "text": "Laksama Muda" },
+        { "id": "b", "text": "Kepten" },
+        { "id": "c", "text": "Komander" },
+        { "id": "c", "text": "Leftenan Komander" }
+      ],
+      "correctAnswer": "b"
+    },
+    {
+      "id": 6,
+      "question": "Apakah ranking UMPSA dalam 2024 Times Higher Education (THE) World University Rankings (in Malaysia)?",
+      "options": [
+        { "id": "a", "text": "2" },
+        { "id": "b", "text": "4" },
+        { "id": "c", "text": "6" },
+        { "id": "d", "text": "8" }
+      ],
+      "correctAnswer": "d"
+    },
+    {
+      "id": 7,
+      "question": "What is the naval term OLDMAN stands for",
+      "options": [
+        { "id": "a", "text": "Veteran" },
+        { "id": "b", "text": "Staff" },
+        { "id": "c", "text": "Commanding Officer" }
+      ],
+      "correctAnswer": "c"
+    },
+    {
+      "id": 8,
+      "question": "Kebawah Duli Yang Maha Mulia (KDYMM) Seri Paduka Baginda Yang di-Pertuan Agong Al-Sultan Abdullah Ri'ayatuddin Al-Mustafa Billah Shah Ibni Almarhum Sultan Haji Ahmad Shah Al-Mustain Billah merupakan Yang di-Pertuan Agong ke-...",
+      "options": [
+        { "id": "a", "text": "13" },
+        { "id": "b", "text": "14" },
+        { "id": "c", "text": "15" },
+        { "id": "d", "text": "16" }
+
+      ],
+      "correctAnswer": "d"
+    },
+    {
+      "id": 9,
+      "question": "Tun Razak Exchange (TRX) opened its doors to visitors on",
+      "image": "/quiz/OIP.jpg", 
+      "options": [
+        { "id": "a", "text": "November 29, 2023" },
+        { "id": "b", "text": "December 29, 2023" },
+        { "id": "c", "text": "November 29, 2024" },
+        { "id": "d", "text": "December 29, 2024" }
+      ],
+      "correctAnswer": "a"
+    },
+    {
+      "id": 10,
+      "question": "Mana satu merupakan nombor Tentera Tuan Hovah?",
+      "options": [
+        { "id": "a", "text": "NV/8708634" },
+        { "id": "b", "text": "NV/8708635" },
+        { "id": "c", "text": "NV/8708636" },
+        { "id": "c", "text": "NV/8708637" }
+      ],
+      "correctAnswer": "c"
+    }
+  ]
+  
