@@ -6,7 +6,7 @@
         { "id": "a", "text": "Spring Festival" },
         { "id": "b", "text": "Autumn Festival" },
         { "id": "c", "text": "Summer Festival" },
-        { "id": "c", "text": "Winter Festival" }
+        { "id": "d", "text": "Winter Festival" }
       ],
       "correctAnswer": "a"
     },

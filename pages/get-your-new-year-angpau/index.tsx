@@ -10,7 +10,7 @@ import Modal from 'react-modal';
 Modal.setAppElement('body');
 
 // Countdown Timer Component
-const CountdownTimer = ({ targetDate, onCountdownEnd, setShowCountdown }) => {
+const CountdownTimer = ({ targetDate, onCountdownEnd }) => {
   const calculateTimeLeft = () => {
     const now = new Date();
     const difference = targetDate.getTime() - now.getTime();
@@ -37,18 +37,9 @@ const CountdownTimer = ({ targetDate, onCountdownEnd, setShowCountdown }) => {
   
       const now = new Date();
       if (now.getTime() >= targetDate.getTime()) {
-        console.log('Countdown ended in CountdownTimer');
         onCountdownEnd();
-        setShowCountdown(false); // Set showCountdown to true when the countdown ends
       }
     }, 1000);
-  
-    // Check if the current time is already past the target time
-    if (new Date().getTime() >= targetDate.getTime()) {
-      console.log('Countdown ended immediately in CountdownTimer');
-      onCountdownEnd();
-      setShowCountdown(false); // Set showCountdown to true when the countdown ends
-    }
   
     return () => clearTimeout(timer);
   }, []);
@@ -56,8 +47,35 @@ const CountdownTimer = ({ targetDate, onCountdownEnd, setShowCountdown }) => {
   
   return (
     <div className={styles.quizContainer}>
-      <h1 className={styles.countdownWrapper}>Quiz starts in:</h1>
-      <h2 className={styles.quizContent}>{timeLeft.days} Days {timeLeft.hours} Hours {timeLeft.minutes} Minutes {timeLeft.seconds} Seconds</h2>
+      <h1 className={styles.countdownHeader}>Quiz starts in:</h1>
+      <h2 className={styles.countdownContent}>
+        {timeLeft.days} Days {timeLeft.hours} Hours {timeLeft.minutes} Minutes {timeLeft.seconds} Seconds
+      </h2>
+    </div>
+  );
+};
+
+// Penalty Countdown Timer Component
+const PenaltyCountdown = ({ penaltyDuration, onPenaltyCountdownEnd }) => {
+  const [timeLeft, setTimeLeft] = useState(penaltyDuration);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft((prevTimeLeft) => prevTimeLeft - 1);
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  useEffect(() => {
+    if (timeLeft === 0) {
+      onPenaltyCountdownEnd();
+    }
+  }, [timeLeft, onPenaltyCountdownEnd]);
+
+  return (
+    <div className={styles.penaltyCountdown}>
+      <h3>Penalty Countdown ⏲: {Math.floor(timeLeft / 60)} Minutes {timeLeft % 60} Seconds</h3>
     </div>
   );
 };
@@ -68,36 +86,35 @@ const QuizPage = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [incorrectAttempts, setIncorrectAttempts] = useState(0);
-  const [timer, setTimer] = useState<number>(0);
+  const [penaltyDuration, setPenaltyDuration] = useState(60); // Initial penalty duration in seconds
   const [showNextButton, setShowNextButton] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [showCountdown, setShowCountdown] = useState(true);
+  const [showQuiz, setShowQuiz] = useState(false);
+  const [penaltyActive, setPenaltyActive] = useState(false); // Track penalty active state
 
-  const targetDate = new Date(); // Current date by default
-  targetDate.setDate(targetDate.getDate() + 0); // Set to tomorrow
-  targetDate.setHours(9, 0, 0, 0); // Set to 2 AM
+  const quizTargetDate = new Date();
+  quizTargetDate.setDate(quizTargetDate.getDate() + 0); // Set to tomorrow
+  quizTargetDate.setHours(9, 0, 0, 0); // Set to 2 AM
 
   useEffect(() => {
-    if (timer > 0) {
-      const intervalId = setInterval(() => {
-        setTimer((prevTimer) => prevTimer - 1);
-      }, 1000);
-      return () => clearInterval(intervalId);
+    if (incorrectAttempts > 0) {
+      setShowQuiz(true);
     }
-  }, [timer]);
+  }, [incorrectAttempts]);
 
   const handleAnswerSelect = (answerId: string) => {
     setSelectedAnswer(answerId);
     const isCorrect = answerId === questionsData[currentQuestionIndex].correctAnswer;
     setShowNextButton(isCorrect);
     if (!isCorrect) {
-      const penaltyTimes = [60, 300, 600]; // 1 min, 5 mins, 10 mins
+      const penalties = [60, 300, 900, 1500, 2400]; // Penalty durations in seconds: 1 min, 5 mins, 15 mins, 25 mins, 40 mins
       const newIncorrectAttempts = incorrectAttempts + 1;
       setIncorrectAttempts(newIncorrectAttempts);
-      const penaltyIndex = Math.min(newIncorrectAttempts - 1, penaltyTimes.length - 1);
-      setTimer(penaltyTimes[penaltyIndex]);
+      const penaltyIndex = Math.min(newIncorrectAttempts - 1, penalties.length - 1);
+      setPenaltyDuration(penalties[penaltyIndex]);
+      setPenaltyActive(true); // Activate penalty
     } else if (currentQuestionIndex === questionsData.length - 1) {
-      setModalIsOpen(true); // Open modal on last correct answer
+      setModalIsOpen(true);
     }
   };
 
@@ -105,14 +122,11 @@ const QuizPage = () => {
     setCurrentQuestionIndex(currentQuestionIndex + 1);
     setShowNextButton(false);
     setSelectedAnswer(null);
-    setTimer(0);
   };
 
-const handleCountdownEnd = () => {
-  console.log('Countdown ended');
-  setShowCountdown(false); // Set showCountdown to false when the countdown ends
-};
-
+  const handlePenaltyCountdownEnd = () => {
+    setPenaltyActive(false); // Deactivate penalty
+  };
 
   // Meta tags for WhatsApp
   const metaTitle = 'Happy New Year | Claim Your Angpao';
@@ -133,33 +147,42 @@ const handleCountdownEnd = () => {
         <Image width={1000} height={200} src="https://cdn.shopify.com/s/files/1/0278/3651/4404/files/CNY.png?v=1704808935" alt="advertisement" />
       </Link>
       
-      {!showCountdown && (
-  <>
-    <h2>{questionsData[currentQuestionIndex].question}</h2>
-    <form>
-      {questionsData[currentQuestionIndex].options.map((option, index) => (
-        <label key={index} className={styles.optionLabel}>
-          <input
-            type="radio"
-            name="answer"
-            value={option.id}
-            checked={selectedAnswer === option.id}
-            onChange={() => handleAnswerSelect(option.id)}
-          />
-          {option.text}
-        </label>
-      ))}
-    </form>
-  </>
-)}
-
-
-      {showNextButton && (
-        <button onClick={handleNextClick} className={styles.nextButton}>Next</button>
+      {!showQuiz && (
+        <CountdownTimer targetDate={quizTargetDate} onCountdownEnd={() => setShowQuiz(true)} />
       )}
 
-{showCountdown && <CountdownTimer targetDate={targetDate} onCountdownEnd={handleCountdownEnd} setShowCountdown={setShowCountdown} />}
-
+      {showQuiz && (
+        <>
+          <h2>{questionsData[currentQuestionIndex].question}</h2>
+          <form>
+            {questionsData[currentQuestionIndex].options.map((option, index) => (
+              penaltyActive ? ( // Hide options when penalty active
+                null
+              ) : (
+                <label key={index} className={styles.optionLabel}>
+                  <input
+                    type="radio"
+                    name="answer"
+                    value={option.id}
+                    checked={selectedAnswer === option.id}
+                    onChange={() => handleAnswerSelect(option.id)}
+                  />
+                  {option.text}
+                </label>
+              )
+            ))}
+          </form>
+          {showNextButton && (
+            <button onClick={handleNextClick} className={styles.nextButton}>Next</button>
+          )}
+          {penaltyActive && (
+            <PenaltyCountdown
+              penaltyDuration={penaltyDuration}
+              onPenaltyCountdownEnd={handlePenaltyCountdownEnd}
+            />
+          )}
+        </>
+      )}
 
       <Modal
         isOpen={modalIsOpen}
