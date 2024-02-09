@@ -150,10 +150,20 @@
 }
 
 .quizContainer {
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; /* Initially centered */
 }
+
+/* Media query for screens smaller than 600px */
+@media (max-width: 600px) {
+  .quizContainer {
+    width: max-content;
+
+  }
+}
+
 
 .countdownWrapper {
   margin-top: 20px;

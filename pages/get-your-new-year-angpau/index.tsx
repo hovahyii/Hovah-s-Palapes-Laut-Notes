@@ -56,8 +56,8 @@ const CountdownTimer = ({ targetDate, onCountdownEnd, setShowCountdown }) => {
   
   return (
     <div className={styles.quizContainer}>
-      <h1>Quiz starts in:</h1>
-      <h2>{timeLeft.days} Days {timeLeft.hours} Hours {timeLeft.minutes} Minutes {timeLeft.seconds} Seconds</h2>
+      <h1 className={styles.countdownWrapper}>Quiz starts in:</h1>
+      <h2 className={styles.quizContent}>{timeLeft.days} Days {timeLeft.hours} Hours {timeLeft.minutes} Minutes {timeLeft.seconds} Seconds</h2>
     </div>
   );
 };
