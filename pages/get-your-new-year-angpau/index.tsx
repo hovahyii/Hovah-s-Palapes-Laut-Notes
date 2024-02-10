@@ -199,7 +199,7 @@ const QuizPage = () => {
         </div>
       </Modal>
       <Link href="https://milkteaplus.vercel.app/bm/service" target="_blank" className={styles.banner}>
-        <Image width={1000} height={200} src="/quiz/advertisement.gif" alt="advertisement" />
+        <Image width={800} height={200} src="/quiz/advertisement.gif" alt="advertisement" />
       </Link>
     </div>
   );
