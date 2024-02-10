@@ -96,7 +96,6 @@
 }
 
 .banner {
-  width: 100vh;
   text-align: center;
   padding: 20px;
   margin: 20px;
@@ -119,6 +118,7 @@
 
 .modalContent {
   text-align: center;
+  padding: 20px;
   background-color: white;
   border-radius: 8px;
   overflow-x: hidden;
