@@ -150,6 +150,8 @@
 }
 
 .quizContainer {
+  overflow-x: hidden;
+  width: 100vw;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -159,7 +161,7 @@
 /* Media query for screens smaller than 600px */
 @media (max-width: 600px) {
   .quizContainer {
-    width: max-content;
+    width: fit-content;
 
   }
 }

@@ -94,7 +94,7 @@ const QuizPage = () => {
 
   const quizTargetDate = new Date();
   quizTargetDate.setDate(quizTargetDate.getDate() + 0); // Set to tomorrow
-  quizTargetDate.setHours(9, 0, 0, 0); // Set to 2 AM
+  quizTargetDate.setHours(2, 0, 0, 0); // Set to 2 AM
 
   useEffect(() => {
     if (incorrectAttempts > 0) {
